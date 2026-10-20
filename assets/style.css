@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --bg: #080b18;
+    --panel: #11172a;
+    --panel-light: #171f38;
+    --violet: #8b5cf6;
+    --blue: #38bdf8;
+    --text: #f3f4ff;
+    --muted: #9ba6c5;
+    --border: rgba(167, 139, 250, 0.18);
+}
+
+html, body, [data-testid="stAppViewContainer"] {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+}
+
+[data-testid="stHeader"] {
+    background: rgba(8, 11, 24, 0.75);
+}
+
+[data-testid="stAppViewContainer"] {
+    background:
+        radial-gradient(ellipse at 10% 0%, rgba(91, 33, 182, 0.22), transparent 35%),
+        radial-gradient(ellipse at 90% 15%, rgba(14, 165, 233, 0.12), transparent 30%),
+        var(--bg);
+}
+
+.block-container {
+    max-width: 1250px;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
+
+h1, h2, h3 {
+    color: var(--text) !important;
+    letter-spacing: -0.035em;
+}
+
+p, label, li {
+    color: #c6cee5;
+}
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #10152a 0%, #0b1020 100%);
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] p {
+    color: #d4d9ef;
+}
+
+[data-testid="stMetric"] {
+    background: linear-gradient(135deg, #171e35, #11172a);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+}
+
+[data-testid="stMetricLabel"] {
+    color: var(--muted);
+}
+
+[data-testid="stMetricValue"] {
+    color: #e9e7ff;
+}
+
+.stButton > button,
+.stFormSubmitButton > button {
+    background: linear-gradient(110deg, var(--violet), #4f8cff);
+    color: white;
+    border: 0;
+    border-radius: 12px;
+    min-height: 44px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover,
+.stFormSubmitButton > button:hover {
+    border: 1px solid #a5b4fc;
+    box-shadow: 0 0 24px rgba(139, 92, 246, 0.3);
+    transform: translateY(-1px);
+    color: white;
+}
+
+[data-testid="stTextInput"] input,
+[data-testid="stTextArea"] textarea {
+    background: #11182b;
+    color: var(--text);
+    border: 1px solid #303957;
+    border-radius: 12px;
+}
+
+[data-testid="stFileUploader"] {
+    background: rgba(17, 23, 42, 0.7);
+    border: 1px dashed #7061ba;
+    border-radius: 18px;
+    padding: 12px;
+}
+
+[data-testid="stTabs"] button {
+    color: #aeb8d7;
+}
+
+[data-testid="stTabs"] button[aria-selected="true"] {
+    color: #c4b5fd;
+    border-bottom-color: var(--violet);
+}
+
+[data-testid="stExpander"] {
+    background: rgba(17, 23, 42, 0.8);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+}
+
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+a {
+    color: var(--blue) !important;
+}
+
+hr {
+    border-color: var(--border);
+}
+
+.learnlens-hero {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    background: linear-gradient(
+        125deg,
+        rgba(124, 58, 237, 0.19),
+        rgba(14, 165, 233, 0.08),
+        rgba(17, 23, 42, 0.85)
+    );
+    box-shadow: 0 18px 55px rgba(0, 0, 0, 0.18);
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    color: #a5b4fc;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-size: 0.76rem;
+    font-weight: 800;
+}
+
+.hero-title {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.1;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+.hero-copy {
+    color: #b8c3e1;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+.feature-card {
+    background: linear-gradient(145deg, #171e35, #101629);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+    min-height: 155px;
+    margin-bottom: 14px;
+}
+
+.feature-icon {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.feature-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #f3f4ff;
+    margin-bottom: 8px;
+}
+
+.feature-copy {
+    color: #9ba6c5;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+.small-muted {
+    color: #9ba6c5;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .block-container {
+        padding: 1rem 1rem 3rem;
+    }
+
+    .learnlens-hero {
+        padding: 22px;
+        border-radius: 18px;
+    }
+
+    [data-testid="stMetric"] {
+        padding: 12px;
+    }
+}
